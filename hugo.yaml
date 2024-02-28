@@ -1,0 +1,56 @@
+baseURL: https://bradleyglover.com/
+languageCode: en-us
+title: Bradley Glover
+theme: ["PaperMod"]
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: true
+buildFuture: false
+buildExpired: false
+pluralizeListTitles: false
+
+params:
+  env: production
+  title: Bradley Glover
+  description: ""
+
+  DateFormat: "January 2, 2006"
+
+  defaultTheme: dark
+  disableThemeToggle: true
+
+  # Displayed when posting site link on socials
+  images: ["me_circle.png"]
+
+
+  # Logo and name shown on top left of site
+  label:
+    text: "Bradley Glover"
+    icon: /me_circle.png
+    iconHeight: 35
+
+  profileMode:
+    # Needs to be explicitly set
+    enabled: true
+    title: Bradley Glover
+    # subtitle: ""
+    imageUrl: /me_circle.png
+    imageWidth: 150
+    imageHeight: 150
+    imageTitle: Me!
+
+  socialIcons:
+  - name: github
+    url: "https://github.com/bradleyglover"
+  - name: linkedin
+    url: "https://www.linkedin.com/in/bradley-glover-2367077b"
+  - name: email
+    url: "mailto:bradley@bradleyglover.com"
+
+# menu:
+#   main:
+#     - identifier: blog
+#       name: Blog
+#       url: /blog
+#       weight: 30

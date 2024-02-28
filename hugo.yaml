@@ -24,16 +24,14 @@ params:
 
 
   # Logo and name shown on top left of site
-  label:
-    text: "Bradley Glover"
-    icon: /me_circle.png
-    iconHeight: 35
+  # Defaults to site title
+  # label:
+    # text: Bradley Glover
 
   profileMode:
-    # Needs to be explicitly set
     enabled: true
-    title: Bradley Glover
-    # subtitle: ""
+    title: " "
+    subtitle: "☁️⚡️🍕" 
     imageUrl: /me_circle.png
     imageWidth: 150
     imageHeight: 150

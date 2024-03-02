@@ -45,9 +45,9 @@ params:
   - name: email
     url: "mailto:bradley@bradleyglover.com"
 
-# menu:
-#   main:
-#     - identifier: blog
-#       name: Blog
-#       url: /blog
-#       weight: 30
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts
+      weight: 30

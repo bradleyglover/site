@@ -13,7 +13,7 @@ resource "cloudflare_pages_project" "site" {
   }
 
   build_config {
-    build_command   = "hugo -b $CF_PAGES_URL"
+    build_command   = "hugo"
     destination_dir = "public"
   }
 }

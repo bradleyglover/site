@@ -23,3 +23,26 @@ resource "cloudflare_pages_domain" "www" {
   project_name = cloudflare_pages_project.site.name
   domain       = "www.bradleyglover.com"
 }
+
+resource "cloudflare_ruleset" "root_to_www_redirect" {
+  zone_id     = data.cloudflare_zone.main.id
+  name        = "root to www redirect"
+  kind        = "zone"
+  phase       = "http_request_dynamic_redirect"
+
+  rules {
+    action = "redirect"
+    description = "root to www redirect"
+    action_parameters {
+      from_value {
+        status_code = 301
+        target_url {
+          expression = "concat(\"https://www.bradleyglover.com\", http.request.uri.path)"
+        }
+        preserve_query_string = true
+      }
+    }
+    expression  = "(http.host eq \"bradleyglover.com\")"
+    enabled     = true
+  }
+}

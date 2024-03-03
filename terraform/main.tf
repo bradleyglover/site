@@ -25,13 +25,13 @@ resource "cloudflare_pages_domain" "www" {
 }
 
 resource "cloudflare_ruleset" "root_to_www_redirect" {
-  zone_id     = data.cloudflare_zone.main.id
-  name        = "root to www redirect"
-  kind        = "zone"
-  phase       = "http_request_dynamic_redirect"
+  zone_id = data.cloudflare_zone.main.id
+  name    = "root to www redirect"
+  kind    = "zone"
+  phase   = "http_request_dynamic_redirect"
 
   rules {
-    action = "redirect"
+    action      = "redirect"
     description = "root to www redirect"
     action_parameters {
       from_value {
@@ -42,7 +42,7 @@ resource "cloudflare_ruleset" "root_to_www_redirect" {
         preserve_query_string = true
       }
     }
-    expression  = "(http.host eq \"bradleyglover.com\")"
-    enabled     = true
+    expression = "(http.host eq \"bradleyglover.com\")"
+    enabled    = true
   }
 }
